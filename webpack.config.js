@@ -45,7 +45,9 @@ module.exports = {
 
   resolve: {
     extensions: ['.js', '.json'],
-    alias:{}
+    alias:{
+      'dat.gui': path.resolve(__dirname,'node_modules/dat.gui/build/dat.gui.min.js')
+    }
   },
 
   devServer:{
@@ -68,7 +70,26 @@ module.exports = {
           babelrc: true,
           cacheDirectory: true,
         },
-      }
+      },
+      // {
+      //   test: /\.css$/,
+      //   use: [
+      //     'style-loader',
+      //     'css-loader?sourceMap',
+      //     'postcss-loader?sourceMap=inline',
+      //   ]
+      // },
+      // {
+      //   test: /\.scss$/,
+      //   use: [
+      //     'style-loader',
+      //     'css-loader?modules',
+      //     'sass-loader?sourceMap'
+      //   ]
+      // },{
+      //   test:/\.html$/,
+      //   loader: 'html-loader'
+      // }
     ]
   },
 
