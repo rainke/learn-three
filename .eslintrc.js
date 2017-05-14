@@ -18,10 +18,13 @@ module.exports = {
             "error",
             "unix"
         ],
-        "no-console":"off",
+        "no-console": "off",
         "quotes": [
             "error",
-            "single"
+            "single",
+            {
+                "allowTemplateLiterals": true
+            }
         ],
         "semi": [
             "error",
